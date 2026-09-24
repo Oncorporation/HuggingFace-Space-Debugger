@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" role="img" aria-label="HuggingFace Space Debugger banner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E141C"/>
+      <stop offset="1" stop-color="#172033"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <g stroke="#2A3A52" stroke-width="1" opacity="0.45">
+    <path d="M0 80 H1280 M0 160 H1280 M0 240 H1280 M0 320 H1280 M0 400 H1280 M0 480 H1280 M0 560 H1280"/>
+    <path d="M80 0 V640 M160 0 V640 M240 0 V640 M320 0 V640 M400 0 V640 M480 0 V640 M560 0 V640 M640 0 V640 M720 0 V640 M800 0 V640 M880 0 V640 M960 0 V640 M1040 0 V640 M1120 0 V640 M1200 0 V640"/>
+  </g>
+  <text x="72" y="292" fill="#FFFFFF" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="72" font-weight="700">HuggingFace</text>
+  <text x="72" y="372" fill="#FFFFFF" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="72" font-weight="700">Space Debugger</text>
+  <rect x="72" y="402" width="420" height="4" fill="#FFD21E"/>
+  <circle cx="496" cy="404" r="5" fill="#FFD21E"/>
+  <text x="72" y="456" fill="#FFD21E" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="24" font-weight="600">Diagnose Gradio  ·  ZeroGPU  ·  Space runtime</text>
+  <rect x="868" y="148" width="344" height="344" rx="76" fill="#FFD21E"/>
+  <g fill="#12151C">
+    <circle cx="980" cy="228" r="14"/>
+    <circle cx="1100" cy="228" r="14"/>
+    <path d="M980 228 L964 196 M1100 228 L1116 196" stroke="#12151C" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <path d="M948 292 C948 258 986 244 1020 244 C1054 244 1092 258 1092 292 L1092 338 C1092 380 1062 408 1020 418 C978 408 948 380 948 338 Z"/>
+    <path d="M982 308 L1020 292 L1058 308 L1058 348 L1020 364 L982 348 Z" fill="#FFD21E"/>
+    <path d="M900 398 L948 398 L934 372" fill="none" stroke="#12151C" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="1134" cy="408" r="32" fill="none" stroke="#12151C" stroke-width="18"/>
+    <path d="M1158 432 L1184 458" stroke="#12151C" stroke-width="18" stroke-linecap="round"/>
+  </g>
+  <text x="900" y="560" fill="#6F8299" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">INFO  container started</text>
+  <text x="900" y="582" fill="#6F8299" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">DEBUG GPU device acquired</text>
+</svg>

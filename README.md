@@ -1,3 +1,11 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="HuggingFace Space Debugger" width="100%">
+</p>
+
+<p align="center">
+  <img src="assets/logo.svg" alt="Logo" width="96" height="96">
+</p>
+
 # HuggingFace Space Debugger
 
 Standalone Agent Skill for diagnosing Hugging Face Spaces (Gradio 6, ZeroGPU, Docker/Streamlit, build/runtime logs).
@@ -62,8 +70,18 @@ references/zerogpu-rules.md
 references/troubleshoot.md
 templates/
 forks/copilot|agents|hermes
+assets/logo.svg
+assets/banner.svg
 .github/workflows/hf-space-debug.yml
 ```
+
+## Branding
+
+- Repo avatar: `assets/logo.svg`
+- README / social banner: `assets/banner.svg` (1280×640)
+- Raster exports also live locally as `assets/logo.png` and `assets/banner.png`
+
+Set GitHub social preview: Settings → General → Social preview → upload `assets/banner.png`.
 
 ## CI
 

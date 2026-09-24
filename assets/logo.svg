@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="HuggingFace Space Debugger">
+  <rect width="512" height="512" fill="#12151C"/>
+  <rect x="56" y="56" width="400" height="400" rx="88" fill="#FFD21E"/>
+  <g fill="#12151C">
+    <circle cx="208" cy="148" r="18"/>
+    <circle cx="304" cy="148" r="18"/>
+    <path d="M208 148 L188 108 M304 148 L324 108" stroke="#12151C" stroke-width="16" stroke-linecap="round" fill="none"/>
+    <path d="M168 228 C168 186 214 168 256 168 C298 168 344 186 344 228 L344 286 C344 338 308 372 256 384 C204 372 168 338 168 286 Z"/>
+    <path d="M210 250 L256 228 L302 250 L302 300 L256 322 L210 300 Z" fill="#FFD21E"/>
+    <path d="M210 250 L256 272 L302 250" fill="none" stroke="#FFD21E" stroke-width="10"/>
+    <path d="M256 272 L256 322" fill="none" stroke="#FFD21E" stroke-width="10"/>
+    <path d="M92 348 L148 348 L132 318" fill="none" stroke="#12151C" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="392" cy="360" r="42" fill="none" stroke="#12151C" stroke-width="26"/>
+    <path d="M422 390 L454 422" stroke="#12151C" stroke-width="26" stroke-linecap="round"/>
+  </g>
+</svg>
