@@ -1,0 +1,69 @@
+name: HF Space Debug
+
+on:
+  workflow_dispatch:
+    inputs:
+      space:
+        description: Space owner/name
+        required: false
+        type: string
+  push:
+    paths:
+      - "app.py"
+      - "requirements.txt"
+      - "README.md"
+      - "Dockerfile"
+  pull_request:
+    paths:
+      - "app.py"
+      - "requirements.txt"
+      - "README.md"
+      - "Dockerfile"
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install debugger deps
+        run: pip install -r "${{ github.workspace }}/.agents/skills/huggingface-space-debugger/requirements.txt"
+        continue-on-error: true
+      - name: Locate debugger script
+        id: locate
+        run: |
+          for p in \
+            .agents/skills/huggingface-space-debugger/scripts/hf_space_debugger.py \
+            .copilot/skills/huggingface-space-debugger/scripts/hf_space_debugger.py \
+            .github/skills/huggingface-space-debugger/scripts/hf_space_debugger.py \
+            scripts/hf_space_debugger.py; do
+            if [ -f "$p" ]; then
+              echo "script=$p" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          done
+          echo "hf_space_debugger.py not found" >&2
+          exit 1
+      - name: Run diagnostic
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_SPACE: ${{ github.event.inputs.space || vars.HF_SPACE }}
+        run: |
+          if [ -z "$HF_SPACE" ]; then
+            echo "Set vars.HF_SPACE or pass workflow_dispatch.space" >&2
+            exit 2
+          fi
+          APP_FLAG=()
+          [ -f app.py ] && APP_FLAG=(--app-path ./app.py)
+          python "${{ steps.locate.outputs.script }}" \
+            --space "$HF_SPACE" \
+            "${APP_FLAG[@]}" \
+            --format markdown \
+            --output diagnostic-report.md
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hf-space-diagnostic
+          path: diagnostic-report.md

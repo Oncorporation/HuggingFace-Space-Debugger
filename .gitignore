@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+diagnostic-report.md
+report.md
+report.json
+report.html
+*.zip

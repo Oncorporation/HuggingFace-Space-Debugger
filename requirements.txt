@@ -1,0 +1,3 @@
+# Debugger runtime only. Do not copy this file into a Space as-is.
+# Spaces must not pin `spaces`.
+huggingface_hub>=0.26.0
